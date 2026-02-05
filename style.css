@@ -100,3 +100,21 @@ body {
   color: #ff9f00;
   font-size: 26px;
 }
+.hero h1 {
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px rgba(255,159,0,.4);
+  }
+  to {
+    text-shadow: 0 0 45px rgba(255,159,0,.9);
+  }
+}
+.card small {
+  display: block;
+  margin-top: 10px;
+  opacity: .7;
+  font-size: 16px;
+}
