@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>RAGE RUST</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>RAGE RUST</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- Шапка -->
-<div class="header-banner">
-    <img src="banner.png" alt="Banner">
-</div>
+<header class="header">
+  <div class="logo">RAGE RUST</div>
 
-<!-- Центр -->
-<section class="hero">
-    <h1>RAGE RUST</h1>
-    <p>Магазин привилегий</p>
-    <button>Перейти в магазин</button>
+  <nav>
+    <a href="#shop">Магазин</a>
+    <a href="#servers">Сервера</a>
+    <a href="#balance">Баланс</a>
+  </nav>
+
+  <button class="login">Войти</button>
+</header>
+
+<!-- КЛИКАБЕЛЬНЫЙ БАННЕР -->
+<section class="banner">
+  <a href="#shop">
+    <img src="banner.jpg" alt="Акция X2">
+    <div class="banner-text">
+      <h1>АКЦИЯ ПОПОЛНЕНИЯ <span>X2</span></h1>
+      <p>RAGE RUST — лучший Rust сервер</p>
+      <div class="banner-btn">Перейти →</div>
+    </div>
+  </a>
 </section>
 
-<!-- Карточки -->
-<section class="cards">
-
-<div class="card">
-    <h2>VIP</h2>
-    <div class="price">199₽</div>
-    <p>Кит старта</p>
-    <p>x2 лут</p>
-    <button>Купить</button>
-</div>
-
-<div class="card">
-    <h2>PREMIUM</h2>
-    <div class="price">399₽</div>
-    <p>Всё из VIP</p>
-    <p>x3 лут</p>
-    <button>Купить</button>
-</div>
-
-<div class="card">
-    <h2>DELUXE</h2>
-    <div class="price">699₽</div>
-    <p>Всё из PREMIUM</p>
-    <p>x5 лут</p>
-    <button>Купить</button>
-</div>
-
+<!-- ВИДЖЕТЫ -->
+<section class="widgets">
+  <div class="widget x2">🔥 X2 НА ПОПОЛНЕНИЕ</div>
+  <div class="widget promo">🎁 ПРОМОКОД</div>
+  <div class="widget free">🆓 FREE VIP</div>
 </section>
 
-<div class="footer">
-© RAGE RUST — Все права защищены
-</div>
+<!-- МАГАЗИН -->
+<section id="shop" class="products">
+  <!-- товары будут подгружаться -->
+</section>
 
+<footer class="footer">
+  <span>© RAGE RUST</span>
+  <span>Сайт создан в системе GameStores</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
