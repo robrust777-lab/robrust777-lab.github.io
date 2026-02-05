@@ -1,82 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>RAGE RUST</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>RAGE RUST</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
-  <h1>RAGE RUST</h1>
-  <p class="subtitle">Магазин привилегий</p>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>RAGE RUST</h1>
+        <p>Магазин привилегий</p>
+        <a href="#" class="btn">Перейти в магазин</a>
+    </section>
 
-  <div class="stats">
-    <span>🟢 Онлайн: 128</span>
-    <span>🔥 Последний вайп: 3 дня назад</span>
-  </div>
+    <!-- SHOP -->
+    <section class="shop">
+        <div class="card">
+            <h2>VIP</h2>
+            <span class="price">199₽</span>
+            <p>Кит старта</p>
+            <p>x2 лут</p>
+            <p>VIP команды</p>
+        </div>
 
-  <a href="#shop" class="btn-main">Перейти в магазин</a>
-</header>
+        <div class="card">
+            <h2>PREMIUM</h2>
+            <span class="price">399₽</span>
+            <p>Всё из VIP</p>
+            <p>x3 лут</p>
+            <p>Цветной ник</p>
+        </div>
 
-<section id="shop" class="shop">
-  <div class="cards">
+        <div class="card">
+            <h2>DELUXE</h2>
+            <span class="price">699₽</span>
+            <p>Всё из PREMIUM</p>
+            <p>x5 лут</p>
+            <p>Уникальные киты</p>
+        </div>
+    </section>
 
-    <div class="card reveal">
-      <h3>VIP</h3>
-      <div class="price">199₽</div>
-      <ul>
-        <li>Кит старта</li>
-        <li>x2 лут</li>
-        <li>VIP-команды</li>
-      </ul>
-      <button class="buy">Купить</button>
-    </div>
-
-    <div class="card reveal">
-      <h3>PREMIUM</h3>
-      <div class="price">399₽</div>
-      <ul>
-        <li>Всё из VIP</li>
-        <li>x3 лут</li>
-        <li>Цветной ник</li>
-      </ul>
-      <button class="buy">Купить</button>
-    </div>
-
-    <div class="card deluxe reveal">
-      <span class="badge">BEST CHOICE</span>
-      <h3>DELUXE</h3>
-      <div class="price">699₽</div>
-      <ul>
-        <li>Всё из PREMIUM</li>
-        <li>x5 лут</li>
-        <li>Уникальные киты</li>
-      </ul>
-      <button class="buy gold">Купить</button>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  © RAGE RUST — Все права защищены
-</footer>
-
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-});
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+    <!-- FOOTER -->
+    <footer>
+        © RAGE RUST — Все права защищены
+    </footer>
 
 </body>
 </html>
