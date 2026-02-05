@@ -6,63 +6,81 @@
 }
 
 body {
-    background: linear-gradient(180deg, #1a0e00, #000);
-    color: #fff;
+    background: url("background.png") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
 }
 
-/* HERO */
-.hero {
-    height: 100vh;
-    background: radial-gradient(circle at top, #ff9900 0%, #1a0e00 45%, #000 100%);
+/* Затемнение поверх фона */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: -1;
+}
+
+/* ШАПКА */
+.header-banner {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    margin-top: 20px;
+}
+
+.header-banner img {
+    width: 90%;
+    max-width: 1400px;
+    border-radius: 15px;
+}
+
+/* HERO блок */
+.hero {
     text-align: center;
+    margin-top: 40px;
 }
 
 .hero h1 {
-    font-size: 64px;
-    letter-spacing: 4px;
-    color: #ff9900;
+    font-size: 60px;
+    color: #ffa200;
+    letter-spacing: 3px;
 }
 
 .hero p {
-    margin-top: 10px;
     opacity: 0.8;
+    margin: 10px 0 20px;
 }
 
-.btn {
-    margin-top: 25px;
-    padding: 12px 28px;
-    background: #ff9900;
-    color: #000;
-    text-decoration: none;
-    border-radius: 25px;
+.hero button {
+    background: #ffa200;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
     font-weight: bold;
-    transition: 0.3s;
+    cursor: pointer;
 }
 
-.btn:hover {
-    background: #ffb733;
-}
-
-/* SHOP */
-.shop {
-    padding: 80px 20px;
+/* Карточки */
+.cards {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    background: linear-gradient(180deg, #000, #1a0e00);
+    gap: 40px;
+    margin: 120px auto;
+    flex-wrap: wrap;
 }
 
 .card {
-    width: 220px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 25px;
+    background: rgba(0,0,0,0.55);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
     text-align: center;
     backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
 }
 
 .card h2 {
@@ -70,22 +88,22 @@ body {
 }
 
 .price {
-    display: block;
-    color: #ff9900;
+    color: #ffa200;
     font-size: 22px;
     margin-bottom: 15px;
 }
 
-.card p {
-    font-size: 14px;
-    opacity: 0.85;
-    margin: 6px 0;
+.card button {
+    margin-top: 15px;
+    background: #ffa200;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
-/* FOOTER */
-footer {
+.footer {
     text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    opacity: 0.6;
+    opacity: 0.5;
+    margin-bottom: 20px;
 }
