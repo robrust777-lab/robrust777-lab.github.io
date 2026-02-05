@@ -118,3 +118,10 @@ body {
   opacity: .7;
   font-size: 16px;
 }
+.hero {
+  min-height: 80vh;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255,140,0,.15);
+}
